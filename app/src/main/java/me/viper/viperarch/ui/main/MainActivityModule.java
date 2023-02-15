@@ -42,16 +42,4 @@ public class MainActivityModule {
     MainPresenter providePresenter() {
         return new MainPresenter();
     }
-    @ActivityScope
-    @Provides
-    @Named("firstPresenter")
-    IBasePresenter providePresenter2() {
-        return new MainPresenter();
-    }
-//    @ActivityScope
-//    @Provides
-//    @Named("secondPresenter")
-//    IBasePresenter providePresenter3() {
-//        return new SecondPresenter();
-//    }
 }

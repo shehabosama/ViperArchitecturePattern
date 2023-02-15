@@ -10,6 +10,7 @@ import me.viper.viperarch.ui.base.DiActivity;
 import me.viper.viperarch.ui.base.viper.Assembler;
 import me.viper.viperarch.ui.base.viper.IBasePresenter;
 import me.viper.viperarch.ui.main.interactor.MainInteractor;
+import me.viper.viperarch.ui.main.presenter.MainPresenter;
 import me.viper.viperarch.ui.main.router.MainRouter;
 import me.viper.viperarch.ui.main.view.MainViewModel;
 
@@ -18,9 +19,9 @@ import javax.inject.Named;
 
 public class MainActivity extends DiActivity{
 
-    @Named("firstPresenter")
+
     @Inject
-    IBasePresenter presenter;
+    MainPresenter presenter;
     @Inject
     MainRouter router;
     @Inject
@@ -54,7 +55,7 @@ public class MainActivity extends DiActivity{
         return new Assembler.Builder()
                 .view(viewModel)
                 .router(router)
-                .presenter(presenter.getBasePresenter())
+                .presenter(presenter)
                 .interactor(interactor)
                 .dataManager(dataManager);
     }
