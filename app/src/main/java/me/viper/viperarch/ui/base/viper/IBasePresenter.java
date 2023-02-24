@@ -8,5 +8,4 @@ import me.viper.viperarch.ui.main.view.MainViewModel;
 public interface IBasePresenter{
      <T> void navigate(Activity currActivity, Class<T> secondActivity);
      void getData();
-     MainViewModel getViewModel();
 }

@@ -15,10 +15,7 @@ public class MainPresenter extends BasePresenter<MainViewModel, MainRouter, Main
     public void setData(){
         getView().getUser().setValue(new User("shehab","osama"));
     }
-    @Override
-    public MainViewModel getViewModel(){
-        return getView();
-    }
+
     @Override
     public <T> void navigate(Activity currActivity, Class<T> secondActivity){
         getRouter().navigate(currActivity,secondActivity);
